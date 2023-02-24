@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><root>
+	<title> Расписание группы P3110 </title>
+	<schedule>
+		<day>
+			<short-name-of-day> Чт </short-name-of-day>
+			<lessons>
+				<lesson>
+					<week> нечетная неделя </week>
+					<time> 11:40-13:10 </time>
+					<place> ул.Ломоносова, д.9, лит. М </place>
+					<room> Актовый зал </room>
+					<name> Основы профессиональной деятельности (лек) </name>
+					<teacher> Клименков Сергей Викторович </teacher>
+					<lesson-format> Очно - дистанционный </lesson-format>
+				</lesson>
+				<lesson>
+					<week> четная неделя </week>
+					<time> 11:40-13:10 </time>
+					<place> ул.Ломоносова, д.9, лит. М </place>
+					<room> Актовый зал </room>
+					<name> Программирование (лек) </name>
+					<teacher> Гаврилов Антон Валерьевич </teacher>
+					<lesson-format> Очно - дистанционный </lesson-format>
+				</lesson>
+				<lesson>
+					<week> 2, 4, 6, 8, 10, 12 </week>
+					<time> 15:20-16:50 </time>
+					<place> ул.Ломоносова, д.9, лит. А </place>
+					<room> 2202 Ауд. </room>
+					<name> Философия (лек) </name>
+					<teacher> Мавринский Илья Игоревич </teacher>
+					<lesson-format> Очно - дистанционный </lesson-format>
+				</lesson>
+				<lesson>
+					<week> 14 </week>
+					<time> 15:20-16:50 </time>
+					<place> ул.Ломоносова, д.9, лит. А </place>
+					<room> 1223 Ауд. </room>
+					<name> Философия (лек) </name>
+					<teacher> Мавринский Илья Игоревич </teacher>
+					<lesson-format> Очно - дистанционный </lesson-format>
+				</lesson>
+			</lessons>
+		</day>
+	</schedule>
+</root>

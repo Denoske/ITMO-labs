@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<all>
+	<root type="dict">
+		<title type="str">Расписание группы P3110</title>
+		<schedule type="dict">
+			<day type="dict">
+				<short-name-of-day type="str">Чт</short-name-of-day>
+				<lessons type="dict">
+					<lesson type="list">
+						<item type="dict">
+							<week type="str">нечетная неделя</week>
+							<time type="str">11:40-13:10</time>
+							<place type="str">ул.Ломоносова, д.9, лит. М</place>
+							<room type="str">Актовый зал</room>
+							<name type="str">Основы профессиональной деятельности (лек)</name>
+							<teacher type="str">Клименков Сергей Викторович</teacher>
+							<lesson-format type="str">Очно - дистанционный</lesson-format>
+						</item>
+						<item type="dict">
+							<week type="str">четная неделя</week>
+							<time type="str">11:40-13:10</time>
+							<place type="str">ул.Ломоносова, д.9, лит. М</place>
+							<room type="str">Актовый зал</room>
+							<name type="str">Программирование (лек)</name>
+							<teacher type="str">Гаврилов Антон Валерьевич</teacher>
+							<lesson-format type="str">Очно - дистанционный</lesson-format>
+						</item>
+						<item type="dict">
+							<week type="str">2, 4, 6, 8, 10, 12</week>
+							<time type="str">15:20-16:50</time>
+							<place type="str">ул.Ломоносова, д.9, лит. А</place>
+							<room type="str">2202 Ауд.</room>
+							<name type="str">Философия (лек)</name>
+							<teacher type="str">Мавринский Илья Игоревич</teacher>
+							<lesson-format type="str">Очно - дистанционный</lesson-format>
+						</item>
+						<item type="dict">
+							<week type="str">14</week>
+							<time type="str">15:20-16:50</time>
+							<place type="str">ул.Ломоносова, д.9, лит. А</place>
+							<room type="str">1223 Ауд.</room>
+							<name type="str">Философия (лек)</name>
+							<teacher type="str">Мавринский Илья Игоревич</teacher>
+							<lesson-format type="str">Очно - дистанционный</lesson-format>
+						</item>
+					</lesson>
+				</lessons>
+			</day>
+		</schedule>
+	</root>
+</all>
