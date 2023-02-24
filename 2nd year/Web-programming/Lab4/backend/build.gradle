@@ -1,0 +1,73 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'ru.senina.itmo'
+version = '0.0'
+sourceCompatibility = '8'
+targetCompatibility = '8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-devtools' //fixme: check that i need it
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'com.auth0:java-jwt:3.18.2'
+
+    //Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    //to processes properties better
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.oracle.ojdbc:orai18n:19.3.0.0'
+    implementation 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    runtimeOnly 'com.h2database:h2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task copyWebApp(type: Copy){
+    from "$rootDir/frontend/build"
+    into "$rootDir/backend/build/resourses/main/static/."
+}
+
+//bootJar {
+//    manifest {
+//        attributes 'Start-Class': 'ru.senina.itmo.weblab4.BackendApplication'
+//    }
+//}
+/*
+sourceSets {
+    main {
+
+        resources {
+            srcDir 'src/main/resources'
+            include '*.properties'
+            //output.resourcesDir = 'build/resources/main'
+        }
+    }
+}*/
+
+bootJar.dependsOn(copyWebApp)
+compileJava.dependsOn ":frontend:build"
