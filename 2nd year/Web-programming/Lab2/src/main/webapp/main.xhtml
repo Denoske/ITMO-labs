@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Лабораторная №3 - график</title>
+    <link rel="icon" type="image/jpg" href="#{resource['/img/duck.png']}"/>
+    <meta name="description" content="Лабораторная работа №3 по дисциплине веб-программирование - график"/>
+    <h:outputScript library="js" name="common.js"/>
+
+    <style type="text/css">
+        header {
+            font-family: sans-serif;
+            font-size: 3vw;
+            height: 3%;
+            background-color: darkgrey;
+            margin: 10px;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .midsplit {
+            width: 45%;
+            border: solid;
+            /*text-align: center;*/
+        }
+
+        #results tr {
+            text-align: center;
+        }
+
+        .incorrect
+        {
+            border:1px solid #CC0000;
+            background-color:#ffeeee;
+        }
+
+        img[src$=".png"]
+        {
+            max-width: 100%;
+        }
+
+        form{
+            font-size: large;
+        }
+        .button {
+            height: 27px;
+            width: 150px;
+            color: #ffffff;
+            background-color: #BB5B3F;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: #F88F6F;
+        }
+        .tableHeader{
+            height: 40px;
+            background-color: #F88F6F;
+            color: white;
+        }
+        .tableOddRow {
+            background-color: white;
+        }
+        .tableOddRow:hover {
+            background-color: #C6C6C6;
+        }
+
+        .tableEvenRow {
+            background-color: #FFC6A3;
+        }
+        .tableEvenRow:hover {
+            background-color: #E5A3A1;
+        }
+        .main_div{
+            float: top;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #header_left {
+            float: left;
+            width: 46%;
+            background-color: #BB5B3F;
+            padding: 5px;
+            margin: 5px;
+        }
+        #header_right {
+            float: right;
+            width: 46%;
+            text-align: right;
+            background-color: #BB5B3F;
+            padding: 5px;
+            margin: 5px;
+        }
+        #right_h2 {
+            text-align: right;
+        }
+        h2{
+            font-size: 20px;
+            color: white;
+        }
+
+    </style>
+
+    <h:outputScript>
+        var prev = '';
+        function redraw()
+        {
+            var intervalID = window.setInterval(myCallback, 1000);
+
+
+
+        }
+        function myCallback()
+        {
+            var data = document.getElementById("input_form:circles_data");
+            if (prev !== data.innerText)
+            {
+                redrawGraph(data.innerText);
+                prev = data.innerText;
+            }
+        }
+    </h:outputScript>
+</h:head>
+
+<h:body onload="loaded(); redraw();">
+    <div id="content">
+
+        <div id="top_div" class="main_div">
+            <div id="header_left">
+                <h2>Голиков Денис Игоревич,
+                    группа Р32102</h2>
+            </div>
+            <img src="resources/img/duck512.gif" width="55px" alt="41"/>
+            <div id="header_right">
+                <h2 id="right_h2">Вариант 15604</h2>
+            </div>
+        </div>
+    </div>
+    <h:form>
+        <h:commandButton action = "#{navigation.processPage()}"
+                         value = "На главную" styleClass="button"/><br/>
+    </h:form>
+    <table>
+        <tr>
+            <td class="midsplit" style="position: absolute;">
+                <img height="100%" width="100%" src="drawing2.svg" style="display: none; top: 0; position: absolute" id="draw" alt=""/>
+                <img height="100%" width="100%" src="graph.svg" style="position: absolute" alt=""/>
+                <svg style="width: 100%; text-align: center; position: relative; left: 0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="graph">
+                </svg>
+                <h:form id="input_form" style="position: absolute">
+                    <h:outputText value="#{data.x}" style="display: none"/> <br/>
+                    <h:outputText value="#{data.y}" style="display: none"/> <br/>
+                    <h:outputText value="#{data.r}" style="display: none"/> <br/>
+
+                    <h:outputText value="Введи X:"/><br/>
+                    <h:inputText value="#{data.x}" required="true" id="x" onchange="validate()"/> <br/>
+
+                    <h:outputText value="Выбери Y:"/><br/>
+                    <ace:sliderEntry id="y"
+                                     axis="x"
+                                     clickableRail="true"
+                                     length="300"
+                                     min="-400"
+                                     max="400"
+                                     stepPercent="1.25"
+                                     value="#{data.y_for_slider}">
+                        <ace:ajax event="slideEnd" execute="@this" render="@form"/>
+                    </ace:sliderEntry>
+                    <h:outputText id="sliderValue" value="#{data.y}"/> <br/>
+
+                    <h:outputText value="Выбери R:"/><br/>
+                    <h:selectOneRadio value="#{data.r}" onchange="r_change(this)" id="r" required="true">
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                    </h:selectOneRadio>
+
+                    <h:inputText id="y_text" value="#{data.y}" style="display: none"/>
+
+                    <h:outputText id="circles_data" value="#{execution.circles()}" style="display: none"/>
+
+                    <h:commandButton type="submit" action="#{execution.submit()}" value="Submit" id="submit" styleClass="button"/> <br/><br/>
+
+                    <h:commandButton action="#{execution.reset()}" value="Reset" styleClass="button" hidden="true"/>
+
+                </h:form>
+            </td>
+            <td class="midsplit" style="z-index: 100">
+
+
+                <h:dataTable value="#{execution.data}" var="row" style="text-align: center;" headerClass="tableHeader" rowClasses="tableOddRow, tableEvenRow">
+                    <h:column>
+                        <f:facet name="header">X</f:facet>
+                        <h:outputText value="#{row.x}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Y</f:facet>
+                        <h:outputText value="#{row.y}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">R</f:facet>
+                        <h:outputText value="#{row.r}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Is inside</f:facet>
+                        <h:outputText value="#{row.inside}"/>
+                    </h:column>
+                </h:dataTable>
+            </td>
+        </tr>
+    </table>
+</h:body>
+
+</html>
