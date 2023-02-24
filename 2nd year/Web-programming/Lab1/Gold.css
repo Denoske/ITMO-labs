@@ -1,0 +1,167 @@
+div.header {
+    height: 60px;
+    width: 100%;
+    float: left;
+    z-index: 10;
+    transition: all .5s ease;
+    border: unset;
+    border-radius: unset;
+}
+html{
+    background-image: url(Background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header_row {
+    color: rgb(111, 66, 114);
+    background-color: rgba(234, 212, 152, 0);
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.maket{
+    border-top: 20px solid rgba(16, 15, 15, 0);
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: rgba(246, 246, 246, 0);
+
+
+}
+.Mood{
+    font-size: 14pt;
+    color: #3399ff;
+}
+.text{
+    background-color: #252F48;
+}
+.holder {
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.header_holder {
+    width: 10%;
+}
+.title {
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+    width: 100%;
+}
+.slave  {
+    font-size: 16px;
+    padding-top: 5px;
+    position: center;
+    text-align: center;
+
+
+}
+.rounded-input{
+    color: #252F48;
+}
+input[type=text] {
+    padding:10px;
+    margin:10px 0;
+    background-color: rgba(32, 35, 34, 0.44);
+
+
+
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #37B5A5;
+}
+.rounded-input {
+    padding:10px;
+    border-radius:10px;
+    color: #37B5A5;
+}
+select {
+    padding:10px;
+    margin:10px 0; // add top and bottom margin
+}
+body {
+    font-family: Roboto, serif;
+    font-weight: normal;
+    color: rgb(183, 93, 203);
+    background-color: rgba(145, 236, 230, 0.25);
+    margin: 10px;
+    padding: 10px;
+    font-size:23px;
+    text-shadow: 1px 1px 1px #000;
+}
+.error{
+    text-align: center;
+
+    font-size: 15px;
+    color: #fa5c9f;
+}
+img.areas{
+    position: center;
+
+}
+.dynamics{
+    text-align: center;
+
+    font-size: 15px;
+    color: #000000;
+}
+.table {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: #252F48;
+}
+.table th {
+    color: #37B5A5;
+    border-bottom: 1px solid #37B5A5;
+    padding: 12px 17px;
+}
+.table td {
+    color: #CAD4D6;
+    border-bottom: 1px solid #37B5A5;
+    border-right:1px solid #37B5A5;
+    padding: 7px 17px;
+    margin: auto;
+
+}
+button{
+    background: #252F48;
+    color: #37B5A5;
+
+}
+select{
+    background: #252F48;
+    color: #37B5A5;
+}
+.png{
+
+    position: center;
+    vertical-align: top;
+    text-align: center;
+
+
+}
+.table tr:last-child td {
+    border-bottom: none;
+}
+.table td:last-child {
+    border-right: none;
+}
+.table tr:hover td {
+    text-decoration: underline;
+}
+.leftcol{
+    text-align: center;
+    vertical-align: 25px;
+}
+
+
+
