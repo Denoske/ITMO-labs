@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background: #FCFAEA;
+}
+
+.container {
+  background: #edebdc;
+  text-align: center;
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid #fcfaea;
+  padding: 50px 50px;
+  border-radius: 5px;
+}
+img[src$=".png"]
+{
+  margin-right: 225px;
+}
+
+.header {
+  background: #c47d68;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 17px;
+
+}
+
+.field{
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+input, select{
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+::placeholder{
+  color: steelblue;
+}
+.btn:hover {
+  background-color: #F88F6F;
+}
+
+.btn {
+  background: #BB5B3F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.swich_link { 
+  /* fixme: move the link to the center of the page */
+  margin-top: 30px;
+  text-align: center;
+  display: block;
+  /*position: absolute;
+  left: 40%;*/
+}
+
+.error {
+  color: tomato;
+}
+
+
+.form-table-box {
+  display: flex;
+}
+
+.plot {
+  padding: 5px;
+  margin : 20px;
+  border-radius: 5px;
+  border: 1px solid steelblue;
+}
+.detailes {
+  font-size: 15px;
+}
+th {
+  text-align: center;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -webkit-center;
+}
+
+table {
+  position: center;
+  border-spacing: 50px;
+  border: 1px solid black;
+  text-align: center;
+  display: block; /* important */
+  height: 600px;
+  width: 500px;
+
+}
+.logout_link{
+  margin-left: 10px;
+  background: #BB5B3F;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+
+}
+
+.logout_link:hover {
+  background-color: #F88F6F;
+}
