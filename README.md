@@ -32,7 +32,12 @@
 + [4 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Web-programming/Lab4)
 
 ### Низкоуровневое программирование
-+ [Пока на Гитлабе](https://gitlab.se.ifmo.ru/Denoske)
++ [Работал на Гитлабе](https://gitlab.se.ifmo.ru/Denoske)
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/low-level-programming/assignment-1-io-library)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/low-level-programming/assignment-2-dictionary)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/low-level-programming/assignment-3-image-rotation-master)
++ [4 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/low-level-programming/assignment-4-memory-allocator)
++ [5 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/low-level-programming/assignment-5-sepia-filter)
 
 ### Вычислительная математика
 + [Метод Гаусса](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Computational%20mathematics/Lab1)
