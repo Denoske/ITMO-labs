@@ -1,19 +1,19 @@
-# Низкоуровневое программирование 
-# Лабораторная работа №1
-## О проекте
-Лабораторная работа посвящена написанию программе, которая способна работать с одним файлом весом 10 гб. 
-
-По варианту реализован файл содержащий данные в виде документного дерева.
-
-## Сборка
-
-  bash$ gcc main.c -o main
-
-## Запуск
-
-  bash$ ./main
-
-
-## Краткое сведение о промежуточном результате
-
-Реализовал структуру дерева и запись в файл. В выходном файле ничего не структурировано и нет системы ввода и вывода.
+# Low-level programming lab1
+### Вариант 1: Документное дерево [(отчёт)](lab1.pdf)
+#### Сборка
++ Linux:
+```
+git clone https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Low%20level%20programming/Lab1
+cd llp_lab1
+make all
+./demo
+./run_tests
+```
++ Windows:
+```
+git clone https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Low%20level%20programming/Lab1
+cd llp_lab1
+make -f Makefile.win all
+.\demo.exe
+.\run_tests.exe
+```
