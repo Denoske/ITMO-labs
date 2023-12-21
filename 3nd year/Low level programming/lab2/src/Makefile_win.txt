@@ -1,0 +1,14 @@
+all: build
+
+run:
+	.\main
+
+build:
+	bison -d parser.y
+	flex lex.l
+	gcc main.c decl.c printer.c adder.c lex.yy.c y.tab.c -o main
+
+clean:
+	del lex.yy.c main parser.tab.c parser.tab.h main.exe
+
+.PHONY:	clean
