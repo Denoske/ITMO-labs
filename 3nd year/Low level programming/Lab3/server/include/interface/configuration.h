@@ -1,0 +1,23 @@
+#ifndef CONFIGURATION_H
+#define CONFIGURATION_H
+#define FILE_GRANULARITY 8
+#define MINIMAL_TUPLE_SIZE 256
+#define SINGLE_TUPLE_VALUE_SIZE 8
+#define OFFSET_VALUE_SIZE 8
+#define NULL_VALUE 0
+#define VAL "88"
+#define TUPLE_ID "id"
+#define STAR "*"
+#define BIG_ENDIAN_SIGNATURE 0xFFFE
+#define PRINT_ID_ARRAY_LEN 16
+#define MIN_ID_ARRAY_SIZE 1
+
+
+#define BOOLEAN_TYPE 0
+#define INTEGER_TYPE 1
+#define FLOAT_TYPE 2
+#define STRING_TYPE 3
+
+#define MAX_STRING_LEN 25
+
+#endif

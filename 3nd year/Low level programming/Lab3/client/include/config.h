@@ -1,0 +1,9 @@
+#ifndef XML_CONFIG_H
+#define XML_CONFIG_H
+
+#define ADDRESS "127.0.0.1"
+
+#define MAX_REQUEST_SIZE 512
+#define MAX_RESPONSE_SIZE 8192
+
+#endif //XML_CONFIG_H

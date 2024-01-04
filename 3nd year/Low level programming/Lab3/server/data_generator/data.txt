@@ -1,0 +1,5 @@
+4 string name integer age float height boolean male
+0 aaa 12 68.35593 False
+0 bbb 15 51.46205 True
+1 ccc 15 64.33338 False
+1 ddd 17 63.78276 True
