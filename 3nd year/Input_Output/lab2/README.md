@@ -48,11 +48,28 @@ fdisk -l /dev/mydisk
 
 Получаем результат:
 
-Скрин 1
+![imgs/image.png](imgs/image.png)
 
 ## Проверка на соответствие второй части задания
 
-Скрин 2
+```
+echo "2" | dd of=/dev/mydisk
+```
+
+![imgs/2-ка.jpg](imgs/2-ка.jpg)
+
+```
+echo "5" | dd of=/dev/mydisk
+```
+
+![imgs/5-ка.jpg](imgs/5-ка.jpg)
+
+```
+echo "7" | dd of=/dev/mydisk
+```
+
+![imgs/7.jpg](imgs/7.jpg)
+
 
 ## Измерение скорости передачи данных между дисками
 
