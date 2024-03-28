@@ -73,7 +73,15 @@ echo "7" | dd of=/dev/mydisk
 
 ## Измерение скорости передачи данных между дисками
 
-скрины так далее
+
+![imgs/screenshot3.jpg](imgs/screenshot3.png)
+
+![imgs/screenshot4_1.jpg](imgs/screenshot4_1.png)
+
+![imgs/screenshot4_1.jpg](imgs/screenshot4_4.png)
+
+![imgs/screenshot4_1.jpg](imgs/screenshot4_7.png)
+
 
 
 ### Скорости передачи данных (MiB/s)
