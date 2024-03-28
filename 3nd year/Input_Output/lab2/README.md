@@ -48,7 +48,7 @@ fdisk -l /dev/mydisk
 
 Получаем результат:
 
-![imgs/image.png](imgs/image.png)
+![imgs/fdisk.jpg](imgs/fdisk.jpg)
 
 ## Проверка на соответствие второй части задания
 
