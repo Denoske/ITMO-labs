@@ -1,1 +1,1 @@
-!(hi)[image.png]
+![hi](image.png)
