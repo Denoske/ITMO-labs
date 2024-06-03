@@ -1,0 +1,152 @@
+source: |-
+  (printstr "Hello, world")
+input: |
+log: |
+  DEBUG    root:machine.py:384 {TICK: 0, PC: 100, ADDR: 100, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } mov r0 0
+  DEBUG    root:machine.py:390 {TICK: 2, PC: 101, ADDR: 101, R0: 50, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 4, PC: 102, ADDR: 102, R0: 50, R1: 72, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 6, PC: 103, ADDR: 103, R0: 51, R1: 72, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: '' << 'H'
+  DEBUG    root:machine.py:390 {TICK: 8, PC: 104, ADDR: 104, R0: 51, R1: 72, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 10, PC: 105, ADDR: 105, R0: 51, R1: 72, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 11, PC: 101, ADDR: 101, R0: 51, R1: 72, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 13, PC: 102, ADDR: 102, R0: 51, R1: 101, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 15, PC: 103, ADDR: 103, R0: 52, R1: 101, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'H' << 'e'
+  DEBUG    root:machine.py:390 {TICK: 17, PC: 104, ADDR: 104, R0: 52, R1: 101, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 19, PC: 105, ADDR: 105, R0: 52, R1: 101, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 20, PC: 101, ADDR: 101, R0: 52, R1: 101, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 22, PC: 102, ADDR: 102, R0: 52, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 24, PC: 103, ADDR: 103, R0: 53, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'He' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 26, PC: 104, ADDR: 104, R0: 53, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 28, PC: 105, ADDR: 105, R0: 53, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 29, PC: 101, ADDR: 101, R0: 53, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 31, PC: 102, ADDR: 102, R0: 53, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 33, PC: 103, ADDR: 103, R0: 54, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hel' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 35, PC: 104, ADDR: 104, R0: 54, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 37, PC: 105, ADDR: 105, R0: 54, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 38, PC: 101, ADDR: 101, R0: 54, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 40, PC: 102, ADDR: 102, R0: 54, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 42, PC: 103, ADDR: 103, R0: 55, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hell' << 'o'
+  DEBUG    root:machine.py:390 {TICK: 44, PC: 104, ADDR: 104, R0: 55, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 46, PC: 105, ADDR: 105, R0: 55, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 47, PC: 101, ADDR: 101, R0: 55, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 49, PC: 102, ADDR: 102, R0: 55, R1: 44, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 51, PC: 103, ADDR: 103, R0: 56, R1: 44, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello' << ','
+  DEBUG    root:machine.py:390 {TICK: 53, PC: 104, ADDR: 104, R0: 56, R1: 44, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 55, PC: 105, ADDR: 105, R0: 56, R1: 44, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 56, PC: 101, ADDR: 101, R0: 56, R1: 44, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 58, PC: 102, ADDR: 102, R0: 56, R1: 32, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 60, PC: 103, ADDR: 103, R0: 57, R1: 32, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello,' << ' '
+  DEBUG    root:machine.py:390 {TICK: 62, PC: 104, ADDR: 104, R0: 57, R1: 32, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 64, PC: 105, ADDR: 105, R0: 57, R1: 32, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 65, PC: 101, ADDR: 101, R0: 57, R1: 32, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 67, PC: 102, ADDR: 102, R0: 57, R1: 119, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 69, PC: 103, ADDR: 103, R0: 58, R1: 119, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello, ' << 'w'
+  DEBUG    root:machine.py:390 {TICK: 71, PC: 104, ADDR: 104, R0: 58, R1: 119, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 73, PC: 105, ADDR: 105, R0: 58, R1: 119, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 74, PC: 101, ADDR: 101, R0: 58, R1: 119, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 76, PC: 102, ADDR: 102, R0: 58, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 78, PC: 103, ADDR: 103, R0: 59, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello, w' << 'o'
+  DEBUG    root:machine.py:390 {TICK: 80, PC: 104, ADDR: 104, R0: 59, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 82, PC: 105, ADDR: 105, R0: 59, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 83, PC: 101, ADDR: 101, R0: 59, R1: 111, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 85, PC: 102, ADDR: 102, R0: 59, R1: 114, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 87, PC: 103, ADDR: 103, R0: 60, R1: 114, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello, wo' << 'r'
+  DEBUG    root:machine.py:390 {TICK: 89, PC: 104, ADDR: 104, R0: 60, R1: 114, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 91, PC: 105, ADDR: 105, R0: 60, R1: 114, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 92, PC: 101, ADDR: 101, R0: 60, R1: 114, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 94, PC: 102, ADDR: 102, R0: 60, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 96, PC: 103, ADDR: 103, R0: 61, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello, wor' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 98, PC: 104, ADDR: 104, R0: 61, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 100, PC: 105, ADDR: 105, R0: 61, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 101, PC: 101, ADDR: 101, R0: 61, R1: 108, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 103, PC: 102, ADDR: 102, R0: 61, R1: 100, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 105, PC: 103, ADDR: 103, R0: 62, R1: 100, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:128 output: 'Hello, worl' << 'd'
+  DEBUG    root:machine.py:390 {TICK: 107, PC: 104, ADDR: 104, R0: 62, R1: 100, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 109, PC: 105, ADDR: 105, R0: 62, R1: 100, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 110, PC: 101, ADDR: 101, R0: 62, R1: 100, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 [r0]
+  DEBUG    root:machine.py:390 {TICK: 112, PC: 102, ADDR: 102, R0: 62, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } add r0 1 -> r0
+  DEBUG    root:machine.py:390 {TICK: 114, PC: 103, ADDR: 103, R0: 63, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r1
+  DEBUG    root:machine.py:390 {TICK: 116, PC: 104, ADDR: 104, R0: 63, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r1 null_term -> r1
+  DEBUG    root:machine.py:390 {TICK: 118, PC: 105, ADDR: 105, R0: 63, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jne 101
+  DEBUG    root:machine.py:390 {TICK: 119, PC: 106, ADDR: 106, R0: 63, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } hlt 
+  INFO     root:machine.py:395 output_buffer: 'Hello, world'
+output: |
+  source LoC: 3 code instr: 7
+  ============================================================
+  Hello, world
+  instr_counter:  66
+code: |-
+  [
+      {
+          "opcode": "mov",
+          "arg1": "r0",
+          "arg2": 0,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": "[r0]",
+          "term": "mov"
+      },
+      {
+          "opcode": "add",
+          "args": [
+              "r0",
+              1
+          ],
+          "res_reg": "r0",
+          "term": "add"
+      },
+      {
+          "opcode": "printc",
+          "arg1": "r1",
+          "term": "printstr"
+      },
+      {
+          "opcode": "cmp",
+          "arg1": "r1",
+          "arg2": "\u0000",
+          "res_reg": "r1",
+          "term": "cmp"
+      },
+      {
+          "opcode": "jne",
+          "arg1": 101,
+          "term": "jne"
+      },
+      {
+          "opcode": "hlt",
+          "term": "hlt"
+      },
+      {
+          "data": {
+              "0": 50,
+              "50": "H",
+              "51": "e",
+              "52": "l",
+              "53": "l",
+              "54": "o",
+              "55": ",",
+              "56": " ",
+              "57": "w",
+              "58": "o",
+              "59": "r",
+              "60": "l",
+              "61": "d",
+              "62": "\u0000"
+          }
+      }
+  ]

@@ -1,0 +1,245 @@
+[
+    {
+        "opcode": "mov",
+        "arg1": "r0",
+        "arg2": 0,
+        "term": "mov"
+    },
+    {
+        "opcode": "add",
+        "args": [
+            "r0",
+            "3"
+        ],
+        "res_reg": "r0",
+        "term": "add"
+    },
+    {
+        "opcode": "mov",
+        "arg1": 0,
+        "arg2": "r0",
+        "res_reg": "r0",
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r0",
+        "arg2": 0,
+        "term": "mov"
+    },
+    {
+        "opcode": "cmp",
+        "arg1": "r0",
+        "arg2": "999",
+        "res_reg": "r0",
+        "term": "cmp"
+    },
+    {
+        "opcode": "jle",
+        "arg1": 107,
+        "res_reg": "r0",
+        "term": "jle"
+    },
+    {
+        "opcode": "jmp",
+        "target_label": "firstloop",
+        "arg1": 112,
+        "res_reg": "r0",
+        "term": "jmp"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r1",
+        "arg2": 2,
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r2",
+        "arg2": 0,
+        "term": "mov"
+    },
+    {
+        "opcode": "add",
+        "args": [
+            "r1",
+            "r2"
+        ],
+        "res_reg": "r1",
+        "term": "add"
+    },
+    {
+        "opcode": "mov",
+        "arg1": 2,
+        "arg2": "r1",
+        "res_reg": "r1",
+        "term": "mov"
+    },
+    {
+        "opcode": "jmp",
+        "label": "firstloop",
+        "arg1": 100,
+        "term": "jmp"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r1",
+        "arg2": 1,
+        "term": "mov"
+    },
+    {
+        "opcode": "add",
+        "args": [
+            "r1",
+            "5"
+        ],
+        "res_reg": "r1",
+        "term": "add"
+    },
+    {
+        "opcode": "mov",
+        "arg1": 1,
+        "arg2": "r1",
+        "res_reg": "r1",
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r1",
+        "arg2": 1,
+        "term": "mov"
+    },
+    {
+        "opcode": "cmp",
+        "arg1": "r1",
+        "arg2": "999",
+        "res_reg": "r1",
+        "term": "cmp"
+    },
+    {
+        "opcode": "jle",
+        "arg1": 119,
+        "res_reg": "r1",
+        "term": "jle"
+    },
+    {
+        "opcode": "jmp",
+        "target_label": "secloop",
+        "arg1": 132,
+        "res_reg": "r1",
+        "term": "jmp"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r2",
+        "arg2": 1,
+        "term": "mov"
+    },
+    {
+        "opcode": "mod",
+        "args": [
+            "r2",
+            "15"
+        ],
+        "res_reg": "r2",
+        "term": "mod"
+    },
+    {
+        "opcode": "cmp",
+        "arg1": "r2",
+        "arg2": "0",
+        "res_reg": "r2",
+        "term": "cmp"
+    },
+    {
+        "opcode": "jne",
+        "arg1": 127,
+        "res_reg": "r2",
+        "term": "jne"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r2",
+        "arg2": 2,
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r3",
+        "arg2": 1,
+        "term": "mov"
+    },
+    {
+        "opcode": "sub",
+        "args": [
+            "r2",
+            "r3"
+        ],
+        "res_reg": "r2",
+        "term": "sub"
+    },
+    {
+        "opcode": "mov",
+        "arg1": 2,
+        "arg2": "r2",
+        "res_reg": "r2",
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r3",
+        "arg2": 2,
+        "term": "mov"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r4",
+        "arg2": 1,
+        "term": "mov"
+    },
+    {
+        "opcode": "add",
+        "args": [
+            "r3",
+            "r4"
+        ],
+        "res_reg": "r3",
+        "term": "add"
+    },
+    {
+        "opcode": "mov",
+        "arg1": 2,
+        "arg2": "r3",
+        "res_reg": "r3",
+        "term": "mov"
+    },
+    {
+        "opcode": "jmp",
+        "label": "secloop",
+        "arg1": 112,
+        "term": "jmp"
+    },
+    {
+        "opcode": "mov",
+        "arg1": "r3",
+        "arg2": 2,
+        "term": "mov"
+    },
+    {
+        "opcode": "print",
+        "arg1": "r3",
+        "res_reg": "r3",
+        "term": "print"
+    },
+    {
+        "opcode": "hlt",
+        "term": "hlt"
+    },
+    {
+        "data": {
+            "0": 0,
+            "1": 0,
+            "2": 0
+        }
+    }
+]

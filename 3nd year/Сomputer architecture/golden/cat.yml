@@ -1,0 +1,102 @@
+source: |-
+  (loop
+    (printc (read))
+  )
+input: |-
+  Hello world
+log: |
+  DEBUG    root:machine.py:384 {TICK: 0, PC: 100, ADDR: 100, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'H'
+  DEBUG    root:machine.py:390 {TICK: 2, PC: 101, ADDR: 101, R0: 72, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: '' << 'H'
+  DEBUG    root:machine.py:390 {TICK: 4, PC: 102, ADDR: 102, R0: 72, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 5, PC: 100, ADDR: 100, R0: 72, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'e'
+  DEBUG    root:machine.py:390 {TICK: 7, PC: 101, ADDR: 101, R0: 101, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'H' << 'e'
+  DEBUG    root:machine.py:390 {TICK: 9, PC: 102, ADDR: 102, R0: 101, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 10, PC: 100, ADDR: 100, R0: 101, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'l'
+  DEBUG    root:machine.py:390 {TICK: 12, PC: 101, ADDR: 101, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'He' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 14, PC: 102, ADDR: 102, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 15, PC: 100, ADDR: 100, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'l'
+  DEBUG    root:machine.py:390 {TICK: 17, PC: 101, ADDR: 101, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hel' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 19, PC: 102, ADDR: 102, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 20, PC: 100, ADDR: 100, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'o'
+  DEBUG    root:machine.py:390 {TICK: 22, PC: 101, ADDR: 101, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hell' << 'o'
+  DEBUG    root:machine.py:390 {TICK: 24, PC: 102, ADDR: 102, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 25, PC: 100, ADDR: 100, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: ' '
+  DEBUG    root:machine.py:390 {TICK: 27, PC: 101, ADDR: 101, R0: 32, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello' << ' '
+  DEBUG    root:machine.py:390 {TICK: 29, PC: 102, ADDR: 102, R0: 32, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 30, PC: 100, ADDR: 100, R0: 32, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'w'
+  DEBUG    root:machine.py:390 {TICK: 32, PC: 101, ADDR: 101, R0: 119, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello ' << 'w'
+  DEBUG    root:machine.py:390 {TICK: 34, PC: 102, ADDR: 102, R0: 119, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 35, PC: 100, ADDR: 100, R0: 119, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'o'
+  DEBUG    root:machine.py:390 {TICK: 37, PC: 101, ADDR: 101, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello w' << 'o'
+  DEBUG    root:machine.py:390 {TICK: 39, PC: 102, ADDR: 102, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 40, PC: 100, ADDR: 100, R0: 111, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'r'
+  DEBUG    root:machine.py:390 {TICK: 42, PC: 101, ADDR: 101, R0: 114, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello wo' << 'r'
+  DEBUG    root:machine.py:390 {TICK: 44, PC: 102, ADDR: 102, R0: 114, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 45, PC: 100, ADDR: 100, R0: 114, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'l'
+  DEBUG    root:machine.py:390 {TICK: 47, PC: 101, ADDR: 101, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello wor' << 'l'
+  DEBUG    root:machine.py:390 {TICK: 49, PC: 102, ADDR: 102, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 50, PC: 100, ADDR: 100, R0: 108, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: 'd'
+  DEBUG    root:machine.py:390 {TICK: 52, PC: 101, ADDR: 101, R0: 100, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:128 output: 'Hello worl' << 'd'
+  DEBUG    root:machine.py:390 {TICK: 54, PC: 102, ADDR: 102, R0: 100, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 55, PC: 100, ADDR: 100, R0: 100, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  DEBUG    root:machine.py:117 input: '\x00'
+  DEBUG    root:machine.py:390 {TICK: 57, PC: 101, ADDR: 101, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } printc r0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 59, PC: 102, ADDR: 102, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 60, PC: 100, ADDR: 100, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } read  -> r0
+  WARNING  root:machine.py:392 Input buffer is empty!
+  INFO     root:machine.py:395 output_buffer: 'Hello world'
+output: |
+  source LoC: 4 code instr: 4
+  ============================================================
+  Hello world
+  instr_counter:  36
+code: |-
+  [
+      {
+          "opcode": "read",
+          "reg": "r0",
+          "res_reg": "r0",
+          "term": "read"
+      },
+      {
+          "opcode": "printc",
+          "arg1": "r0",
+          "res_reg": "r0",
+          "term": "printc"
+      },
+      {
+          "opcode": "jmp",
+          "label": null,
+          "arg1": 100,
+          "term": "jmp"
+      },
+      {
+          "opcode": "hlt",
+          "term": "hlt"
+      },
+      {
+          "data": {}
+      }
+  ]

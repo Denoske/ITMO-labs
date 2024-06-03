@@ -1,0 +1,74 @@
+source: |-
+  (print 
+    (if (= 10 10)
+      (+ 4 3)
+      (- 6 10)
+    )
+  )
+input: |
+log: |
+  DEBUG    root:machine.py:384 {TICK: 0, PC: 100, ADDR: 100, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } cmp 10 10 -> r0
+  DEBUG    root:machine.py:390 {TICK: 2, PC: 101, ADDR: 101, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 3, PC: 102, ADDR: 102, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } add 4 3 -> r0
+  DEBUG    root:machine.py:390 {TICK: 5, PC: 103, ADDR: 103, R0: 7, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jmp 105
+  DEBUG    root:machine.py:390 {TICK: 6, PC: 105, ADDR: 105, R0: 7, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } print r0 -> r0
+  DEBUG    root:machine.py:122 output: '' << '7'
+  DEBUG    root:machine.py:390 {TICK: 8, PC: 106, ADDR: 106, R0: 7, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } hlt 
+  INFO     root:machine.py:395 output_buffer: '7'
+output: |
+  source LoC: 13 code instr: 7
+  ============================================================
+  7
+  instr_counter:  5
+code: |-
+  [
+      {
+          "opcode": "cmp",
+          "arg1": "10",
+          "arg2": "10",
+          "res_reg": "r0",
+          "term": "cmp"
+      },
+      {
+          "opcode": "jne",
+          "arg1": 104,
+          "res_reg": "r0",
+          "term": "jne"
+      },
+      {
+          "opcode": "add",
+          "args": [
+              "4",
+              "3"
+          ],
+          "res_reg": "r0",
+          "term": "add"
+      },
+      {
+          "opcode": "jmp",
+          "arg1": 105,
+          "term": "jmp"
+      },
+      {
+          "opcode": "sub",
+          "args": [
+              "6",
+              "10"
+          ],
+          "res_reg": "r0",
+          "term": "sub"
+      },
+      {
+          "opcode": "print",
+          "arg1": "r0",
+          "res_reg": "r0",
+          "term": "print"
+      },
+      {
+          "opcode": "hlt",
+          "term": "hlt"
+      },
+      {
+          "data": {}
+      }
+  ]

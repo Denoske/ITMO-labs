@@ -1,0 +1,7 @@
+(defv a 1)
+(defv b 1)
+(defv c 1)
+(defv r 1)
+(defv sum 0)
+(setq sum (+ a b c r))
+(print sum)

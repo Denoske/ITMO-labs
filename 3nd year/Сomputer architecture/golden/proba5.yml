@@ -1,0 +1,734 @@
+source: |-
+  (defv a 2520)
+  (defv b 11)
+  (defv c 3)
+  (defv e 2520)
+  (defv d 11)
+  (loop secloop
+      (loop firstloop
+          (if (= b 0)
+              (return-from firstloop)
+          )
+          (setq c b)
+          (setq b (% a b))
+          (setq a c)
+       )
+       (setq c (* (/ e a) d))
+       (setq e c)
+       (setq d (+ d 1))
+       (setq a e)
+       (setq b d)
+       (if (= d 20)
+           (return-from secloop)
+       )
+  )
+  (print c)
+input: |
+log: |
+  DEBUG    root:machine.py:384 {TICK: 0, PC: 100, ADDR: 100, R0: 0, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 2, PC: 101, ADDR: 101, R0: 11, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 4, PC: 102, ADDR: 102, R0: 11, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 5, PC: 104, ADDR: 104, R0: 11, R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 7, PC: 105, ADDR: 105, R0: 11, R1: 11, R2: 0, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 9, PC: 106, ADDR: 106, R0: 11, R1: 11, R2: 0, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 11, PC: 107, ADDR: 107, R0: 11, R1: 2520, R2: 0, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 13, PC: 108, ADDR: 108, R0: 11, R1: 2520, R2: 11, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 15, PC: 109, ADDR: 109, R0: 11, R1: 1, R2: 11, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 17, PC: 110, ADDR: 110, R0: 11, R1: 1, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 19, PC: 111, ADDR: 111, R0: 11, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 21, PC: 112, ADDR: 112, R0: 11, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 22, PC: 100, ADDR: 100, R0: 11, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 24, PC: 101, ADDR: 101, R0: 1, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 26, PC: 102, ADDR: 102, R0: 1, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 27, PC: 104, ADDR: 104, R0: 1, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 29, PC: 105, ADDR: 105, R0: 1, R1: 1, R2: 11, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 31, PC: 106, ADDR: 106, R0: 1, R1: 1, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 33, PC: 107, ADDR: 107, R0: 1, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 35, PC: 108, ADDR: 108, R0: 1, R1: 11, R2: 1, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 37, PC: 109, ADDR: 109, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 39, PC: 110, ADDR: 110, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 41, PC: 111, ADDR: 111, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 43, PC: 112, ADDR: 112, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 44, PC: 100, ADDR: 100, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 46, PC: 101, ADDR: 101, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 48, PC: 102, ADDR: 102, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 49, PC: 103, ADDR: 103, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 50, PC: 113, ADDR: 113, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 52, PC: 114, ADDR: 114, R0: 0, R1: 2520, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 54, PC: 115, ADDR: 115, R0: 0, R1: 2520, R2: 1, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 56, PC: 116, ADDR: 116, R0: 0, R1: 2520, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 58, PC: 117, ADDR: 117, R0: 0, R1: 2520, R2: 11, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 60, PC: 118, ADDR: 118, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 62, PC: 119, ADDR: 119, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 64, PC: 120, ADDR: 120, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 66, PC: 121, ADDR: 121, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 68, PC: 122, ADDR: 122, R0: 0, R1: 11, R2: 11, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 70, PC: 123, ADDR: 123, R0: 0, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 72, PC: 124, ADDR: 124, R0: 0, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 74, PC: 125, ADDR: 125, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 76, PC: 126, ADDR: 126, R0: 0, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 78, PC: 127, ADDR: 127, R0: 0, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 80, PC: 128, ADDR: 128, R0: 0, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 82, PC: 129, ADDR: 129, R0: 0, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 84, PC: 130, ADDR: 130, R0: 0, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 85, PC: 132, ADDR: 132, R0: 0, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 86, PC: 100, ADDR: 100, R0: 0, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 88, PC: 101, ADDR: 101, R0: 12, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 90, PC: 102, ADDR: 102, R0: 12, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 91, PC: 104, ADDR: 104, R0: 12, R1: -8, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 93, PC: 105, ADDR: 105, R0: 12, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 95, PC: 106, ADDR: 106, R0: 12, R1: 12, R2: 11, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 97, PC: 107, ADDR: 107, R0: 12, R1: 27720, R2: 11, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 99, PC: 108, ADDR: 108, R0: 12, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 101, PC: 109, ADDR: 109, R0: 12, R1: 0, R2: 12, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 103, PC: 110, ADDR: 110, R0: 12, R1: 0, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 105, PC: 111, ADDR: 111, R0: 12, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 107, PC: 112, ADDR: 112, R0: 12, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 108, PC: 100, ADDR: 100, R0: 12, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 110, PC: 101, ADDR: 101, R0: 0, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 112, PC: 102, ADDR: 102, R0: 0, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 113, PC: 103, ADDR: 103, R0: 0, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 114, PC: 113, ADDR: 113, R0: 0, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 116, PC: 114, ADDR: 114, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 118, PC: 115, ADDR: 115, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 120, PC: 116, ADDR: 116, R0: 0, R1: 2310, R2: 12, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 122, PC: 117, ADDR: 117, R0: 0, R1: 2310, R2: 12, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 124, PC: 118, ADDR: 118, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 126, PC: 119, ADDR: 119, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 128, PC: 120, ADDR: 120, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 130, PC: 121, ADDR: 121, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 132, PC: 122, ADDR: 122, R0: 0, R1: 12, R2: 12, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 134, PC: 123, ADDR: 123, R0: 0, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 136, PC: 124, ADDR: 124, R0: 0, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 138, PC: 125, ADDR: 125, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 140, PC: 126, ADDR: 126, R0: 0, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 142, PC: 127, ADDR: 127, R0: 0, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 144, PC: 128, ADDR: 128, R0: 0, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 146, PC: 129, ADDR: 129, R0: 0, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 148, PC: 130, ADDR: 130, R0: 0, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 149, PC: 132, ADDR: 132, R0: 0, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 150, PC: 100, ADDR: 100, R0: 0, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 152, PC: 101, ADDR: 101, R0: 13, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 154, PC: 102, ADDR: 102, R0: 13, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 155, PC: 104, ADDR: 104, R0: 13, R1: -7, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 157, PC: 105, ADDR: 105, R0: 13, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 159, PC: 106, ADDR: 106, R0: 13, R1: 13, R2: 12, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 161, PC: 107, ADDR: 107, R0: 13, R1: 27720, R2: 12, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 163, PC: 108, ADDR: 108, R0: 13, R1: 27720, R2: 13, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 165, PC: 109, ADDR: 109, R0: 13, R1: 4, R2: 13, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 167, PC: 110, ADDR: 110, R0: 13, R1: 4, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 169, PC: 111, ADDR: 111, R0: 13, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 171, PC: 112, ADDR: 112, R0: 13, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 172, PC: 100, ADDR: 100, R0: 13, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 174, PC: 101, ADDR: 101, R0: 4, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 176, PC: 102, ADDR: 102, R0: 4, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 177, PC: 104, ADDR: 104, R0: 4, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 179, PC: 105, ADDR: 105, R0: 4, R1: 4, R2: 13, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 181, PC: 106, ADDR: 106, R0: 4, R1: 4, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 183, PC: 107, ADDR: 107, R0: 4, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 185, PC: 108, ADDR: 108, R0: 4, R1: 13, R2: 4, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 187, PC: 109, ADDR: 109, R0: 4, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 189, PC: 110, ADDR: 110, R0: 4, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 191, PC: 111, ADDR: 111, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 193, PC: 112, ADDR: 112, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 194, PC: 100, ADDR: 100, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 196, PC: 101, ADDR: 101, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 198, PC: 102, ADDR: 102, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 199, PC: 104, ADDR: 104, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 201, PC: 105, ADDR: 105, R0: 1, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 203, PC: 106, ADDR: 106, R0: 1, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 205, PC: 107, ADDR: 107, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 207, PC: 108, ADDR: 108, R0: 1, R1: 4, R2: 1, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 209, PC: 109, ADDR: 109, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 211, PC: 110, ADDR: 110, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 213, PC: 111, ADDR: 111, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 215, PC: 112, ADDR: 112, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 216, PC: 100, ADDR: 100, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 218, PC: 101, ADDR: 101, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 220, PC: 102, ADDR: 102, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 221, PC: 103, ADDR: 103, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 222, PC: 113, ADDR: 113, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 224, PC: 114, ADDR: 114, R0: 0, R1: 27720, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 226, PC: 115, ADDR: 115, R0: 0, R1: 27720, R2: 1, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 228, PC: 116, ADDR: 116, R0: 0, R1: 27720, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 230, PC: 117, ADDR: 117, R0: 0, R1: 27720, R2: 13, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 232, PC: 118, ADDR: 118, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 234, PC: 119, ADDR: 119, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 236, PC: 120, ADDR: 120, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 238, PC: 121, ADDR: 121, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 240, PC: 122, ADDR: 122, R0: 0, R1: 13, R2: 13, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 242, PC: 123, ADDR: 123, R0: 0, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 244, PC: 124, ADDR: 124, R0: 0, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 246, PC: 125, ADDR: 125, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 248, PC: 126, ADDR: 126, R0: 0, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 250, PC: 127, ADDR: 127, R0: 0, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 252, PC: 128, ADDR: 128, R0: 0, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 254, PC: 129, ADDR: 129, R0: 0, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 256, PC: 130, ADDR: 130, R0: 0, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 257, PC: 132, ADDR: 132, R0: 0, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 258, PC: 100, ADDR: 100, R0: 0, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 260, PC: 101, ADDR: 101, R0: 14, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 262, PC: 102, ADDR: 102, R0: 14, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 263, PC: 104, ADDR: 104, R0: 14, R1: -6, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 265, PC: 105, ADDR: 105, R0: 14, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 267, PC: 106, ADDR: 106, R0: 14, R1: 14, R2: 13, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 269, PC: 107, ADDR: 107, R0: 14, R1: 360360, R2: 13, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 271, PC: 108, ADDR: 108, R0: 14, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 273, PC: 109, ADDR: 109, R0: 14, R1: 0, R2: 14, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 275, PC: 110, ADDR: 110, R0: 14, R1: 0, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 277, PC: 111, ADDR: 111, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 279, PC: 112, ADDR: 112, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 280, PC: 100, ADDR: 100, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 282, PC: 101, ADDR: 101, R0: 0, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 284, PC: 102, ADDR: 102, R0: 0, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 285, PC: 103, ADDR: 103, R0: 0, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 286, PC: 113, ADDR: 113, R0: 0, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 288, PC: 114, ADDR: 114, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 290, PC: 115, ADDR: 115, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 292, PC: 116, ADDR: 116, R0: 0, R1: 25740, R2: 14, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 294, PC: 117, ADDR: 117, R0: 0, R1: 25740, R2: 14, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 296, PC: 118, ADDR: 118, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 298, PC: 119, ADDR: 119, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 300, PC: 120, ADDR: 120, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 302, PC: 121, ADDR: 121, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 304, PC: 122, ADDR: 122, R0: 0, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 306, PC: 123, ADDR: 123, R0: 0, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 308, PC: 124, ADDR: 124, R0: 0, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 310, PC: 125, ADDR: 125, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 312, PC: 126, ADDR: 126, R0: 0, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 314, PC: 127, ADDR: 127, R0: 0, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 316, PC: 128, ADDR: 128, R0: 0, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 318, PC: 129, ADDR: 129, R0: 0, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 320, PC: 130, ADDR: 130, R0: 0, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 321, PC: 132, ADDR: 132, R0: 0, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 322, PC: 100, ADDR: 100, R0: 0, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 324, PC: 101, ADDR: 101, R0: 15, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 326, PC: 102, ADDR: 102, R0: 15, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 327, PC: 104, ADDR: 104, R0: 15, R1: -5, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 329, PC: 105, ADDR: 105, R0: 15, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 331, PC: 106, ADDR: 106, R0: 15, R1: 15, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 333, PC: 107, ADDR: 107, R0: 15, R1: 360360, R2: 14, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 335, PC: 108, ADDR: 108, R0: 15, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 337, PC: 109, ADDR: 109, R0: 15, R1: 0, R2: 15, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 339, PC: 110, ADDR: 110, R0: 15, R1: 0, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 341, PC: 111, ADDR: 111, R0: 15, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 343, PC: 112, ADDR: 112, R0: 15, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 344, PC: 100, ADDR: 100, R0: 15, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 346, PC: 101, ADDR: 101, R0: 0, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 348, PC: 102, ADDR: 102, R0: 0, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 349, PC: 103, ADDR: 103, R0: 0, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 350, PC: 113, ADDR: 113, R0: 0, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 352, PC: 114, ADDR: 114, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 354, PC: 115, ADDR: 115, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 356, PC: 116, ADDR: 116, R0: 0, R1: 24024, R2: 15, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 358, PC: 117, ADDR: 117, R0: 0, R1: 24024, R2: 15, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 360, PC: 118, ADDR: 118, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 362, PC: 119, ADDR: 119, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 364, PC: 120, ADDR: 120, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 366, PC: 121, ADDR: 121, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 368, PC: 122, ADDR: 122, R0: 0, R1: 15, R2: 15, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 370, PC: 123, ADDR: 123, R0: 0, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 372, PC: 124, ADDR: 124, R0: 0, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 374, PC: 125, ADDR: 125, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 376, PC: 126, ADDR: 126, R0: 0, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 378, PC: 127, ADDR: 127, R0: 0, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 380, PC: 128, ADDR: 128, R0: 0, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 382, PC: 129, ADDR: 129, R0: 0, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 384, PC: 130, ADDR: 130, R0: 0, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 385, PC: 132, ADDR: 132, R0: 0, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 386, PC: 100, ADDR: 100, R0: 0, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 388, PC: 101, ADDR: 101, R0: 16, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 390, PC: 102, ADDR: 102, R0: 16, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 391, PC: 104, ADDR: 104, R0: 16, R1: -4, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 393, PC: 105, ADDR: 105, R0: 16, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 395, PC: 106, ADDR: 106, R0: 16, R1: 16, R2: 15, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 397, PC: 107, ADDR: 107, R0: 16, R1: 360360, R2: 15, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 399, PC: 108, ADDR: 108, R0: 16, R1: 360360, R2: 16, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 401, PC: 109, ADDR: 109, R0: 16, R1: 8, R2: 16, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 403, PC: 110, ADDR: 110, R0: 16, R1: 8, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 405, PC: 111, ADDR: 111, R0: 16, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 407, PC: 112, ADDR: 112, R0: 16, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 408, PC: 100, ADDR: 100, R0: 16, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 410, PC: 101, ADDR: 101, R0: 8, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 412, PC: 102, ADDR: 102, R0: 8, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 413, PC: 104, ADDR: 104, R0: 8, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 415, PC: 105, ADDR: 105, R0: 8, R1: 8, R2: 16, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 417, PC: 106, ADDR: 106, R0: 8, R1: 8, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 419, PC: 107, ADDR: 107, R0: 8, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 421, PC: 108, ADDR: 108, R0: 8, R1: 16, R2: 8, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 423, PC: 109, ADDR: 109, R0: 8, R1: 0, R2: 8, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 425, PC: 110, ADDR: 110, R0: 8, R1: 0, R2: 8, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 427, PC: 111, ADDR: 111, R0: 8, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 429, PC: 112, ADDR: 112, R0: 8, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 430, PC: 100, ADDR: 100, R0: 8, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 432, PC: 101, ADDR: 101, R0: 0, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 434, PC: 102, ADDR: 102, R0: 0, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 435, PC: 103, ADDR: 103, R0: 0, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 436, PC: 113, ADDR: 113, R0: 0, R1: 8, R2: 8, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 438, PC: 114, ADDR: 114, R0: 0, R1: 360360, R2: 8, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 440, PC: 115, ADDR: 115, R0: 0, R1: 360360, R2: 8, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 442, PC: 116, ADDR: 116, R0: 0, R1: 45045, R2: 8, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 444, PC: 117, ADDR: 117, R0: 0, R1: 45045, R2: 16, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 446, PC: 118, ADDR: 118, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 448, PC: 119, ADDR: 119, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 450, PC: 120, ADDR: 120, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 452, PC: 121, ADDR: 121, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 454, PC: 122, ADDR: 122, R0: 0, R1: 16, R2: 16, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 456, PC: 123, ADDR: 123, R0: 0, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 458, PC: 124, ADDR: 124, R0: 0, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 460, PC: 125, ADDR: 125, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 462, PC: 126, ADDR: 126, R0: 0, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 464, PC: 127, ADDR: 127, R0: 0, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 466, PC: 128, ADDR: 128, R0: 0, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 468, PC: 129, ADDR: 129, R0: 0, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 470, PC: 130, ADDR: 130, R0: 0, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 471, PC: 132, ADDR: 132, R0: 0, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 472, PC: 100, ADDR: 100, R0: 0, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 474, PC: 101, ADDR: 101, R0: 17, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 476, PC: 102, ADDR: 102, R0: 17, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 477, PC: 104, ADDR: 104, R0: 17, R1: -3, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 479, PC: 105, ADDR: 105, R0: 17, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 481, PC: 106, ADDR: 106, R0: 17, R1: 17, R2: 16, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 483, PC: 107, ADDR: 107, R0: 17, R1: 720720, R2: 16, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 485, PC: 108, ADDR: 108, R0: 17, R1: 720720, R2: 17, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 487, PC: 109, ADDR: 109, R0: 17, R1: 5, R2: 17, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 489, PC: 110, ADDR: 110, R0: 17, R1: 5, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 491, PC: 111, ADDR: 111, R0: 17, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 493, PC: 112, ADDR: 112, R0: 17, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 494, PC: 100, ADDR: 100, R0: 17, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 496, PC: 101, ADDR: 101, R0: 5, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 498, PC: 102, ADDR: 102, R0: 5, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 499, PC: 104, ADDR: 104, R0: 5, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 501, PC: 105, ADDR: 105, R0: 5, R1: 5, R2: 17, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 503, PC: 106, ADDR: 106, R0: 5, R1: 5, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 505, PC: 107, ADDR: 107, R0: 5, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 507, PC: 108, ADDR: 108, R0: 5, R1: 17, R2: 5, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 509, PC: 109, ADDR: 109, R0: 5, R1: 2, R2: 5, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 511, PC: 110, ADDR: 110, R0: 5, R1: 2, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 513, PC: 111, ADDR: 111, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 515, PC: 112, ADDR: 112, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 516, PC: 100, ADDR: 100, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 518, PC: 101, ADDR: 101, R0: 2, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 520, PC: 102, ADDR: 102, R0: 2, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 521, PC: 104, ADDR: 104, R0: 2, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 523, PC: 105, ADDR: 105, R0: 2, R1: 2, R2: 5, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 525, PC: 106, ADDR: 106, R0: 2, R1: 2, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 527, PC: 107, ADDR: 107, R0: 2, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 529, PC: 108, ADDR: 108, R0: 2, R1: 5, R2: 2, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 531, PC: 109, ADDR: 109, R0: 2, R1: 1, R2: 2, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 533, PC: 110, ADDR: 110, R0: 2, R1: 1, R2: 2, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 535, PC: 111, ADDR: 111, R0: 2, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 537, PC: 112, ADDR: 112, R0: 2, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 538, PC: 100, ADDR: 100, R0: 2, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 540, PC: 101, ADDR: 101, R0: 1, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 542, PC: 102, ADDR: 102, R0: 1, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 543, PC: 104, ADDR: 104, R0: 1, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 545, PC: 105, ADDR: 105, R0: 1, R1: 1, R2: 2, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 547, PC: 106, ADDR: 106, R0: 1, R1: 1, R2: 2, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 549, PC: 107, ADDR: 107, R0: 1, R1: 2, R2: 2, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 551, PC: 108, ADDR: 108, R0: 1, R1: 2, R2: 1, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 553, PC: 109, ADDR: 109, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 555, PC: 110, ADDR: 110, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 557, PC: 111, ADDR: 111, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 559, PC: 112, ADDR: 112, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 560, PC: 100, ADDR: 100, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 562, PC: 101, ADDR: 101, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 564, PC: 102, ADDR: 102, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 565, PC: 103, ADDR: 103, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 566, PC: 113, ADDR: 113, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 568, PC: 114, ADDR: 114, R0: 0, R1: 720720, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 570, PC: 115, ADDR: 115, R0: 0, R1: 720720, R2: 1, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 572, PC: 116, ADDR: 116, R0: 0, R1: 720720, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 574, PC: 117, ADDR: 117, R0: 0, R1: 720720, R2: 17, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 576, PC: 118, ADDR: 118, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 578, PC: 119, ADDR: 119, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 580, PC: 120, ADDR: 120, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 582, PC: 121, ADDR: 121, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 584, PC: 122, ADDR: 122, R0: 0, R1: 17, R2: 17, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 586, PC: 123, ADDR: 123, R0: 0, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 588, PC: 124, ADDR: 124, R0: 0, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 590, PC: 125, ADDR: 125, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 592, PC: 126, ADDR: 126, R0: 0, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 594, PC: 127, ADDR: 127, R0: 0, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 596, PC: 128, ADDR: 128, R0: 0, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 598, PC: 129, ADDR: 129, R0: 0, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 600, PC: 130, ADDR: 130, R0: 0, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 601, PC: 132, ADDR: 132, R0: 0, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 602, PC: 100, ADDR: 100, R0: 0, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 604, PC: 101, ADDR: 101, R0: 18, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 606, PC: 102, ADDR: 102, R0: 18, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 607, PC: 104, ADDR: 104, R0: 18, R1: -2, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 609, PC: 105, ADDR: 105, R0: 18, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 611, PC: 106, ADDR: 106, R0: 18, R1: 18, R2: 17, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 613, PC: 107, ADDR: 107, R0: 18, R1: 12252240, R2: 17, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 615, PC: 108, ADDR: 108, R0: 18, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 617, PC: 109, ADDR: 109, R0: 18, R1: 0, R2: 18, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 619, PC: 110, ADDR: 110, R0: 18, R1: 0, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 621, PC: 111, ADDR: 111, R0: 18, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 623, PC: 112, ADDR: 112, R0: 18, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 624, PC: 100, ADDR: 100, R0: 18, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 626, PC: 101, ADDR: 101, R0: 0, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 628, PC: 102, ADDR: 102, R0: 0, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 629, PC: 103, ADDR: 103, R0: 0, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 630, PC: 113, ADDR: 113, R0: 0, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 632, PC: 114, ADDR: 114, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 634, PC: 115, ADDR: 115, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 636, PC: 116, ADDR: 116, R0: 0, R1: 680680, R2: 18, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 638, PC: 117, ADDR: 117, R0: 0, R1: 680680, R2: 18, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 640, PC: 118, ADDR: 118, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 642, PC: 119, ADDR: 119, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 644, PC: 120, ADDR: 120, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 646, PC: 121, ADDR: 121, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 648, PC: 122, ADDR: 122, R0: 0, R1: 18, R2: 18, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 650, PC: 123, ADDR: 123, R0: 0, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 652, PC: 124, ADDR: 124, R0: 0, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 654, PC: 125, ADDR: 125, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 656, PC: 126, ADDR: 126, R0: 0, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 658, PC: 127, ADDR: 127, R0: 0, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 660, PC: 128, ADDR: 128, R0: 0, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 662, PC: 129, ADDR: 129, R0: 0, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 664, PC: 130, ADDR: 130, R0: 0, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 665, PC: 132, ADDR: 132, R0: 0, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 666, PC: 100, ADDR: 100, R0: 0, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 668, PC: 101, ADDR: 101, R0: 19, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 670, PC: 102, ADDR: 102, R0: 19, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 671, PC: 104, ADDR: 104, R0: 19, R1: -1, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 673, PC: 105, ADDR: 105, R0: 19, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 675, PC: 106, ADDR: 106, R0: 19, R1: 19, R2: 18, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 677, PC: 107, ADDR: 107, R0: 19, R1: 12252240, R2: 18, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 679, PC: 108, ADDR: 108, R0: 19, R1: 12252240, R2: 19, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 681, PC: 109, ADDR: 109, R0: 19, R1: 14, R2: 19, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 683, PC: 110, ADDR: 110, R0: 19, R1: 14, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 685, PC: 111, ADDR: 111, R0: 19, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 687, PC: 112, ADDR: 112, R0: 19, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 688, PC: 100, ADDR: 100, R0: 19, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 690, PC: 101, ADDR: 101, R0: 14, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 692, PC: 102, ADDR: 102, R0: 14, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 693, PC: 104, ADDR: 104, R0: 14, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 695, PC: 105, ADDR: 105, R0: 14, R1: 14, R2: 19, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 697, PC: 106, ADDR: 106, R0: 14, R1: 14, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 699, PC: 107, ADDR: 107, R0: 14, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 701, PC: 108, ADDR: 108, R0: 14, R1: 19, R2: 14, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 703, PC: 109, ADDR: 109, R0: 14, R1: 5, R2: 14, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 705, PC: 110, ADDR: 110, R0: 14, R1: 5, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 707, PC: 111, ADDR: 111, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 709, PC: 112, ADDR: 112, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 710, PC: 100, ADDR: 100, R0: 14, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 712, PC: 101, ADDR: 101, R0: 5, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 714, PC: 102, ADDR: 102, R0: 5, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 715, PC: 104, ADDR: 104, R0: 5, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 717, PC: 105, ADDR: 105, R0: 5, R1: 5, R2: 14, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 719, PC: 106, ADDR: 106, R0: 5, R1: 5, R2: 14, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 721, PC: 107, ADDR: 107, R0: 5, R1: 14, R2: 14, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 723, PC: 108, ADDR: 108, R0: 5, R1: 14, R2: 5, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 725, PC: 109, ADDR: 109, R0: 5, R1: 4, R2: 5, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 727, PC: 110, ADDR: 110, R0: 5, R1: 4, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 729, PC: 111, ADDR: 111, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 731, PC: 112, ADDR: 112, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 732, PC: 100, ADDR: 100, R0: 5, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 734, PC: 101, ADDR: 101, R0: 4, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 736, PC: 102, ADDR: 102, R0: 4, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 737, PC: 104, ADDR: 104, R0: 4, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 739, PC: 105, ADDR: 105, R0: 4, R1: 4, R2: 5, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 741, PC: 106, ADDR: 106, R0: 4, R1: 4, R2: 5, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 743, PC: 107, ADDR: 107, R0: 4, R1: 5, R2: 5, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 745, PC: 108, ADDR: 108, R0: 4, R1: 5, R2: 4, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 747, PC: 109, ADDR: 109, R0: 4, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 749, PC: 110, ADDR: 110, R0: 4, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 751, PC: 111, ADDR: 111, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 753, PC: 112, ADDR: 112, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 754, PC: 100, ADDR: 100, R0: 4, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 756, PC: 101, ADDR: 101, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 758, PC: 102, ADDR: 102, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 759, PC: 104, ADDR: 104, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 1
+  DEBUG    root:machine.py:390 {TICK: 761, PC: 105, ADDR: 105, R0: 1, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 763, PC: 106, ADDR: 106, R0: 1, R1: 1, R2: 4, R3: 0, R4: 0, R5: 0 } mov r1 0
+  DEBUG    root:machine.py:390 {TICK: 765, PC: 107, ADDR: 107, R0: 1, R1: 4, R2: 4, R3: 0, R4: 0, R5: 0 } mov r2 1
+  DEBUG    root:machine.py:390 {TICK: 767, PC: 108, ADDR: 108, R0: 1, R1: 4, R2: 1, R3: 0, R4: 0, R5: 0 } mod r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 769, PC: 109, ADDR: 109, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 771, PC: 110, ADDR: 110, R0: 1, R1: 0, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 773, PC: 111, ADDR: 111, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 775, PC: 112, ADDR: 112, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 100
+  DEBUG    root:machine.py:390 {TICK: 776, PC: 100, ADDR: 100, R0: 1, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r0 1
+  DEBUG    root:machine.py:390 {TICK: 778, PC: 101, ADDR: 101, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } cmp r0 0 -> r0
+  DEBUG    root:machine.py:390 {TICK: 780, PC: 102, ADDR: 102, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jne 104 -> r0
+  DEBUG    root:machine.py:390 {TICK: 781, PC: 103, ADDR: 103, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } jmp 113 -> r0
+  DEBUG    root:machine.py:390 {TICK: 782, PC: 113, ADDR: 113, R0: 0, R1: 1, R2: 1, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 784, PC: 114, ADDR: 114, R0: 0, R1: 12252240, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 0
+  DEBUG    root:machine.py:390 {TICK: 786, PC: 115, ADDR: 115, R0: 0, R1: 12252240, R2: 1, R3: 0, R4: 0, R5: 0 } dev r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 788, PC: 116, ADDR: 116, R0: 0, R1: 12252240, R2: 1, R3: 0, R4: 0, R5: 0 } mov r2 4
+  DEBUG    root:machine.py:390 {TICK: 790, PC: 117, ADDR: 117, R0: 0, R1: 12252240, R2: 19, R3: 0, R4: 0, R5: 0 } mul r1 r2 -> r1
+  DEBUG    root:machine.py:390 {TICK: 792, PC: 118, ADDR: 118, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov 2 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 794, PC: 119, ADDR: 119, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 2
+  DEBUG    root:machine.py:390 {TICK: 796, PC: 120, ADDR: 120, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov 3 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 798, PC: 121, ADDR: 121, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 800, PC: 122, ADDR: 122, R0: 0, R1: 19, R2: 19, R3: 0, R4: 0, R5: 0 } add r1 1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 802, PC: 123, ADDR: 123, R0: 0, R1: 20, R2: 19, R3: 0, R4: 0, R5: 0 } mov 4 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 804, PC: 124, ADDR: 124, R0: 0, R1: 20, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 3
+  DEBUG    root:machine.py:390 {TICK: 806, PC: 125, ADDR: 125, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov 0 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 808, PC: 126, ADDR: 126, R0: 0, R1: 232792560, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 810, PC: 127, ADDR: 127, R0: 0, R1: 20, R2: 19, R3: 0, R4: 0, R5: 0 } mov 1 r1 -> r1
+  DEBUG    root:machine.py:390 {TICK: 812, PC: 128, ADDR: 128, R0: 0, R1: 20, R2: 19, R3: 0, R4: 0, R5: 0 } mov r1 4
+  DEBUG    root:machine.py:390 {TICK: 814, PC: 129, ADDR: 129, R0: 0, R1: 20, R2: 19, R3: 0, R4: 0, R5: 0 } cmp r1 20 -> r1
+  DEBUG    root:machine.py:390 {TICK: 816, PC: 130, ADDR: 130, R0: 0, R1: 0, R2: 19, R3: 0, R4: 0, R5: 0 } jne 132 -> r1
+  DEBUG    root:machine.py:390 {TICK: 817, PC: 131, ADDR: 131, R0: 0, R1: 0, R2: 19, R3: 0, R4: 0, R5: 0 } jmp 133 -> r1
+  DEBUG    root:machine.py:390 {TICK: 818, PC: 133, ADDR: 133, R0: 0, R1: 0, R2: 19, R3: 0, R4: 0, R5: 0 } mov r2 2
+  DEBUG    root:machine.py:390 {TICK: 820, PC: 134, ADDR: 134, R0: 0, R1: 0, R2: 232792560, R3: 0, R4: 0, R5: 0 } print r2 -> r2
+  DEBUG    root:machine.py:122 output: '' << '232792560'
+  DEBUG    root:machine.py:390 {TICK: 822, PC: 135, ADDR: 135, R0: 0, R1: 0, R2: 232792560, R3: 0, R4: 0, R5: 0 } hlt 
+  INFO     root:machine.py:395 output_buffer: '232792560'
+output: |
+  source LoC: 69 code instr: 36
+  ============================================================
+  232792560
+  instr_counter:  449
+code: |-
+  [
+      {
+          "opcode": "mov",
+          "arg1": "r0",
+          "arg2": 1,
+          "term": "mov"
+      },
+      {
+          "opcode": "cmp",
+          "arg1": "r0",
+          "arg2": "0",
+          "res_reg": "r0",
+          "term": "cmp"
+      },
+      {
+          "opcode": "jne",
+          "arg1": 104,
+          "res_reg": "r0",
+          "term": "jne"
+      },
+      {
+          "opcode": "jmp",
+          "target_label": "firstloop",
+          "arg1": 113,
+          "res_reg": "r0",
+          "term": "jmp"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 1,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 2,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 0,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r2",
+          "arg2": 1,
+          "term": "mov"
+      },
+      {
+          "opcode": "mod",
+          "args": [
+              "r1",
+              "r2"
+          ],
+          "res_reg": "r1",
+          "term": "mod"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 1,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 2,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 0,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "jmp",
+          "label": "firstloop",
+          "arg1": 100,
+          "term": "jmp"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 3,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r2",
+          "arg2": 0,
+          "term": "mov"
+      },
+      {
+          "opcode": "dev",
+          "args": [
+              "r1",
+              "r2"
+          ],
+          "res_reg": "r1",
+          "term": "dev"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r2",
+          "arg2": 4,
+          "term": "mov"
+      },
+      {
+          "opcode": "mul",
+          "args": [
+              "r1",
+              "r2"
+          ],
+          "res_reg": "r1",
+          "term": "mul"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 2,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 2,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 3,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 4,
+          "term": "mov"
+      },
+      {
+          "opcode": "add",
+          "args": [
+              "r1",
+              "1"
+          ],
+          "res_reg": "r1",
+          "term": "add"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 4,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 3,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 0,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 4,
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": 1,
+          "arg2": "r1",
+          "res_reg": "r1",
+          "term": "mov"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r1",
+          "arg2": 4,
+          "term": "mov"
+      },
+      {
+          "opcode": "cmp",
+          "arg1": "r1",
+          "arg2": "20",
+          "res_reg": "r1",
+          "term": "cmp"
+      },
+      {
+          "opcode": "jne",
+          "arg1": 132,
+          "res_reg": "r1",
+          "term": "jne"
+      },
+      {
+          "opcode": "jmp",
+          "target_label": "secloop",
+          "arg1": 133,
+          "res_reg": "r1",
+          "term": "jmp"
+      },
+      {
+          "opcode": "jmp",
+          "label": "secloop",
+          "arg1": 100,
+          "term": "jmp"
+      },
+      {
+          "opcode": "mov",
+          "arg1": "r2",
+          "arg2": 2,
+          "term": "mov"
+      },
+      {
+          "opcode": "print",
+          "arg1": "r2",
+          "res_reg": "r2",
+          "term": "print"
+      },
+      {
+          "opcode": "hlt",
+          "term": "hlt"
+      },
+      {
+          "data": {
+              "0": 2520,
+              "1": 11,
+              "2": 3,
+              "3": 2520,
+              "4": 11
+          }
+      }
+  ]

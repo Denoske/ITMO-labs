@@ -1,0 +1,5 @@
+(defv a )
+(printstr "What is your name? Hi, ")
+(loop
+(printc (read))
+)
