@@ -1,0 +1,157 @@
+VCD info: dumpfile dump.vcd opened for output.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[0] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[1] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[2] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[3] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[4] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[5] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[6] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[7] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[8] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[9] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[10] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[11] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[12] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[13] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[14] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[15] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[16] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[17] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[18] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[19] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[20] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[21] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[22] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[23] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[24] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[25] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[26] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[27] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[28] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[29] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[30] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[31] will conflict with an escaped identifier.
+WARNING: ../../../src/sm_rom.v:23: $readmemh: Standard inconsistency, following 1364-2005.
+WARNING: ../../../src/sm_rom.v:23: $readmemh(program.hex): Not enough words in the file for the requested range [0:63].
+    0  pc = 00000000 instr = 00000533   a0 = x a1 = x    add   $10, $0, $0
+    1  pc = 00000000 instr = 00000533   a0 = 0 a1 = x    add   $10, $0, $0
+    2  pc = 00000000 instr = 00000533   a0 = 0 a1 = x    add   $10, $0, $0
+    3  pc = 00000000 instr = 00000533   a0 = 0 a1 = x    add   $10, $0, $0
+    4  pc = 00000000 instr = 00000533   a0 = 0 a1 = x    add   $10, $0, $0
+    5  pc = 00000004 instr = 00150513   a0 = 0 a1 = x    addi  $10, $10, 0x00000001
+    6  pc = 00000008 instr = 00052023   a0 = 1 a1 = x    lru.push($10)
+    7  pc = 0000000c instr = 00150513   a0 = 1 a1 = x    addi  $10, $10, 0x00000001
+    8  pc = 00000010 instr = 00052023   a0 = 2 a1 = x    lru.push($10)
+    9  pc = 00000014 instr = 00150513   a0 = 2 a1 = x    addi  $10, $10, 0x00000001
+   10  pc = 00000018 instr = 00052023   a0 = 3 a1 = x    lru.push($10)
+   11  pc = 0000001c instr = 00150513   a0 = 3 a1 = x    addi  $10, $10, 0x00000001
+   12  pc = 00000020 instr = 00052023   a0 = 4 a1 = x    lru.push($10)
+   13  pc = 00000024 instr = 00150513   a0 = 4 a1 = x    addi  $10, $10, 0x00000001
+   14  pc = 00000028 instr = 00052023   a0 = 5 a1 = x    lru.push($10)
+   15  pc = 0000002c instr = 00150513   a0 = 5 a1 = x    addi  $10, $10, 0x00000001
+   16  pc = 00000030 instr = 00052023   a0 = 6 a1 = x    lru.push($10)
+   17  pc = 00000034 instr = 00150513   a0 = 6 a1 = x    addi  $10, $10, 0x00000001
+   18  pc = 00000038 instr = 00052023   a0 = 7 a1 = x    lru.push($10)
+   19  pc = 0000003c instr = 00150513   a0 = 7 a1 = x    addi  $10, $10, 0x00000001
+   20  pc = 00000040 instr = 00052023   a0 = 8 a1 = x    lru.push($10)
+   21  pc = 00000044 instr = 00150513   a0 = 8 a1 = x    addi  $10, $10, 0x00000001
+   22  pc = 00000048 instr = 00052023   a0 = 9 a1 = x    lru.push($10)
+   23  pc = 0000004c instr = 00150513   a0 = 9 a1 = x    addi  $10, $10, 0x00000001
+   24  pc = 00000050 instr = 00052023   a0 = 10 a1 = x    lru.push($10)
+   25  pc = 00000054 instr = 000005b3   a0 = 10 a1 = x    add   $11, $0, $0
+   26  pc = 00000058 instr = 0015a503   a0 = 10 a1 = 0    $10 = lru.pop($11)
+   27  pc = 0000005c instr = 00158593   a0 = 8 a1 = 0    addi  $11, $11, 0x00000001
+   28  pc = 00000060 instr = 0015a503   a0 = 8 a1 = 1    $10 = lru.pop($11)
+   29  pc = 00000064 instr = 00158593   a0 = 7 a1 = 1    addi  $11, $11, 0x00000001
+   30  pc = 00000068 instr = 0015a503   a0 = 7 a1 = 2    $10 = lru.pop($11)
+   31  pc = 0000006c instr = 00158593   a0 = 6 a1 = 2    addi  $11, $11, 0x00000001
+   32  pc = 00000070 instr = 0015a503   a0 = 6 a1 = 3    $10 = lru.pop($11)
+   33  pc = 00000074 instr = 00158593   a0 = 5 a1 = 3    addi  $11, $11, 0x00000001
+   34  pc = 00000078 instr = 0015a503   a0 = 5 a1 = 4    $10 = lru.pop($11)
+   35  pc = 0000007c instr = 00158593   a0 = 4 a1 = 4    addi  $11, $11, 0x00000001
+   36  pc = 00000080 instr = 0015a503   a0 = 4 a1 = 5    $10 = lru.pop($11)
+   37  pc = 00000084 instr = 00158593   a0 = 3 a1 = 5    addi  $11, $11, 0x00000001
+   38  pc = 00000088 instr = 0015a503   a0 = 3 a1 = 6    $10 = lru.pop($11)
+   39  pc = 0000008c instr = 00158593   a0 = 10 a1 = 6    addi  $11, $11, 0x00000001
+   40  pc = 00000090 instr = 0015a503   a0 = 10 a1 = 7    $10 = lru.pop($11)
+   41  pc = 00000094 instr = 00158593   a0 = 9 a1 = 7    addi  $11, $11, 0x00000001
+   42  pc = 00000098 instr = 0015a503   a0 = 9 a1 = 8    $10 = lru.pop($11)
+   43  pc = 0000009c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   44  pc = 000000a0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   45  pc = 000000a4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   46  pc = 000000a8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   47  pc = 000000ac instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   48  pc = 000000b0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   49  pc = 000000b4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   50  pc = 000000b8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   51  pc = 000000bc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   52  pc = 000000c0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   53  pc = 000000c4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   54  pc = 000000c8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   55  pc = 000000cc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   56  pc = 000000d0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   57  pc = 000000d4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   58  pc = 000000d8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   59  pc = 000000dc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   60  pc = 000000e0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   61  pc = 000000e4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   62  pc = 000000e8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   63  pc = 000000ec instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   64  pc = 000000f0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   65  pc = 000000f4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   66  pc = 000000f8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   67  pc = 000000fc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   68  pc = 00000100 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   69  pc = 00000104 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   70  pc = 00000108 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   71  pc = 0000010c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   72  pc = 00000110 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   73  pc = 00000114 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   74  pc = 00000118 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   75  pc = 0000011c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   76  pc = 00000120 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   77  pc = 00000124 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   78  pc = 00000128 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   79  pc = 0000012c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   80  pc = 00000130 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   81  pc = 00000134 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   82  pc = 00000138 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   83  pc = 0000013c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   84  pc = 00000140 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   85  pc = 00000144 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   86  pc = 00000148 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   87  pc = 0000014c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   88  pc = 00000150 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   89  pc = 00000154 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   90  pc = 00000158 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   91  pc = 0000015c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   92  pc = 00000160 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   93  pc = 00000164 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   94  pc = 00000168 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   95  pc = 0000016c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   96  pc = 00000170 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   97  pc = 00000174 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   98  pc = 00000178 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+   99  pc = 0000017c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  100  pc = 00000180 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  101  pc = 00000184 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  102  pc = 00000188 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  103  pc = 0000018c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  104  pc = 00000190 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  105  pc = 00000194 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  106  pc = 00000198 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  107  pc = 0000019c instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  108  pc = 000001a0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  109  pc = 000001a4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  110  pc = 000001a8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  111  pc = 000001ac instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  112  pc = 000001b0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  113  pc = 000001b4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  114  pc = 000001b8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  115  pc = 000001bc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  116  pc = 000001c0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  117  pc = 000001c4 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  118  pc = 000001c8 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  119  pc = 000001cc instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+  120  pc = 000001d0 instr = xxxxxxxx   a0 = X a1 = 8    new/unknown
+Timeout

@@ -1,0 +1,157 @@
+VCD info: dumpfile dump.vcd opened for output.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[0] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[1] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[2] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[3] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[4] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[5] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[6] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[7] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[8] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[9] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[10] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[11] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[12] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[13] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[14] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[15] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[16] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[17] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[18] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[19] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[20] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[21] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[22] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[23] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[24] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[25] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[26] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[27] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[28] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[29] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[30] will conflict with an escaped identifier.
+VCD warning: array word sm_testbench.sm_top.sm_cpu.rf.rf[31] will conflict with an escaped identifier.
+WARNING: ../../../src/sm_rom.v:23: $readmemh: Standard inconsistency, following 1364-2005.
+WARNING: ../../../src/sm_rom.v:23: $readmemh(program.hex): Not enough words in the file for the requested range [0:63].
+    0  pc = 00000000 instr = 00000533   a0 = x   add   $10, $0, $0
+    1  pc = 00000000 instr = 00000533   a0 = 0   add   $10, $0, $0
+    2  pc = 00000000 instr = 00000533   a0 = 0   add   $10, $0, $0
+    3  pc = 00000000 instr = 00000533   a0 = 0   add   $10, $0, $0
+    4  pc = 00000000 instr = 00000533   a0 = 0   add   $10, $0, $0
+    5  pc = 00000004 instr = 00150513   a0 = 0   addi  $10, $10, 0x00000001
+    6  pc = 00000008 instr = fe000ee3   a0 = 1   beq   $0, $0, 0xfffffffc (-4)
+    7  pc = 00000004 instr = 00150513   a0 = 1   addi  $10, $10, 0x00000001
+    8  pc = 00000008 instr = fe000ee3   a0 = 2   beq   $0, $0, 0xfffffffc (-4)
+    9  pc = 00000004 instr = 00150513   a0 = 2   addi  $10, $10, 0x00000001
+   10  pc = 00000008 instr = fe000ee3   a0 = 3   beq   $0, $0, 0xfffffffc (-4)
+   11  pc = 00000004 instr = 00150513   a0 = 3   addi  $10, $10, 0x00000001
+   12  pc = 00000008 instr = fe000ee3   a0 = 4   beq   $0, $0, 0xfffffffc (-4)
+   13  pc = 00000004 instr = 00150513   a0 = 4   addi  $10, $10, 0x00000001
+   14  pc = 00000008 instr = fe000ee3   a0 = 5   beq   $0, $0, 0xfffffffc (-4)
+   15  pc = 00000004 instr = 00150513   a0 = 5   addi  $10, $10, 0x00000001
+   16  pc = 00000008 instr = fe000ee3   a0 = 6   beq   $0, $0, 0xfffffffc (-4)
+   17  pc = 00000004 instr = 00150513   a0 = 6   addi  $10, $10, 0x00000001
+   18  pc = 00000008 instr = fe000ee3   a0 = 7   beq   $0, $0, 0xfffffffc (-4)
+   19  pc = 00000004 instr = 00150513   a0 = 7   addi  $10, $10, 0x00000001
+   20  pc = 00000008 instr = fe000ee3   a0 = 8   beq   $0, $0, 0xfffffffc (-4)
+   21  pc = 00000004 instr = 00150513   a0 = 8   addi  $10, $10, 0x00000001
+   22  pc = 00000008 instr = fe000ee3   a0 = 9   beq   $0, $0, 0xfffffffc (-4)
+   23  pc = 00000004 instr = 00150513   a0 = 9   addi  $10, $10, 0x00000001
+   24  pc = 00000008 instr = fe000ee3   a0 = 10   beq   $0, $0, 0xfffffffc (-4)
+   25  pc = 00000004 instr = 00150513   a0 = 10   addi  $10, $10, 0x00000001
+   26  pc = 00000008 instr = fe000ee3   a0 = 11   beq   $0, $0, 0xfffffffc (-4)
+   27  pc = 00000004 instr = 00150513   a0 = 11   addi  $10, $10, 0x00000001
+   28  pc = 00000008 instr = fe000ee3   a0 = 12   beq   $0, $0, 0xfffffffc (-4)
+   29  pc = 00000004 instr = 00150513   a0 = 12   addi  $10, $10, 0x00000001
+   30  pc = 00000008 instr = fe000ee3   a0 = 13   beq   $0, $0, 0xfffffffc (-4)
+   31  pc = 00000004 instr = 00150513   a0 = 13   addi  $10, $10, 0x00000001
+   32  pc = 00000008 instr = fe000ee3   a0 = 14   beq   $0, $0, 0xfffffffc (-4)
+   33  pc = 00000004 instr = 00150513   a0 = 14   addi  $10, $10, 0x00000001
+   34  pc = 00000008 instr = fe000ee3   a0 = 15   beq   $0, $0, 0xfffffffc (-4)
+   35  pc = 00000004 instr = 00150513   a0 = 15   addi  $10, $10, 0x00000001
+   36  pc = 00000008 instr = fe000ee3   a0 = 16   beq   $0, $0, 0xfffffffc (-4)
+   37  pc = 00000004 instr = 00150513   a0 = 16   addi  $10, $10, 0x00000001
+   38  pc = 00000008 instr = fe000ee3   a0 = 17   beq   $0, $0, 0xfffffffc (-4)
+   39  pc = 00000004 instr = 00150513   a0 = 17   addi  $10, $10, 0x00000001
+   40  pc = 00000008 instr = fe000ee3   a0 = 18   beq   $0, $0, 0xfffffffc (-4)
+   41  pc = 00000004 instr = 00150513   a0 = 18   addi  $10, $10, 0x00000001
+   42  pc = 00000008 instr = fe000ee3   a0 = 19   beq   $0, $0, 0xfffffffc (-4)
+   43  pc = 00000004 instr = 00150513   a0 = 19   addi  $10, $10, 0x00000001
+   44  pc = 00000008 instr = fe000ee3   a0 = 20   beq   $0, $0, 0xfffffffc (-4)
+   45  pc = 00000004 instr = 00150513   a0 = 20   addi  $10, $10, 0x00000001
+   46  pc = 00000008 instr = fe000ee3   a0 = 21   beq   $0, $0, 0xfffffffc (-4)
+   47  pc = 00000004 instr = 00150513   a0 = 21   addi  $10, $10, 0x00000001
+   48  pc = 00000008 instr = fe000ee3   a0 = 22   beq   $0, $0, 0xfffffffc (-4)
+   49  pc = 00000004 instr = 00150513   a0 = 22   addi  $10, $10, 0x00000001
+   50  pc = 00000008 instr = fe000ee3   a0 = 23   beq   $0, $0, 0xfffffffc (-4)
+   51  pc = 00000004 instr = 00150513   a0 = 23   addi  $10, $10, 0x00000001
+   52  pc = 00000008 instr = fe000ee3   a0 = 24   beq   $0, $0, 0xfffffffc (-4)
+   53  pc = 00000004 instr = 00150513   a0 = 24   addi  $10, $10, 0x00000001
+   54  pc = 00000008 instr = fe000ee3   a0 = 25   beq   $0, $0, 0xfffffffc (-4)
+   55  pc = 00000004 instr = 00150513   a0 = 25   addi  $10, $10, 0x00000001
+   56  pc = 00000008 instr = fe000ee3   a0 = 26   beq   $0, $0, 0xfffffffc (-4)
+   57  pc = 00000004 instr = 00150513   a0 = 26   addi  $10, $10, 0x00000001
+   58  pc = 00000008 instr = fe000ee3   a0 = 27   beq   $0, $0, 0xfffffffc (-4)
+   59  pc = 00000004 instr = 00150513   a0 = 27   addi  $10, $10, 0x00000001
+   60  pc = 00000008 instr = fe000ee3   a0 = 28   beq   $0, $0, 0xfffffffc (-4)
+   61  pc = 00000004 instr = 00150513   a0 = 28   addi  $10, $10, 0x00000001
+   62  pc = 00000008 instr = fe000ee3   a0 = 29   beq   $0, $0, 0xfffffffc (-4)
+   63  pc = 00000004 instr = 00150513   a0 = 29   addi  $10, $10, 0x00000001
+   64  pc = 00000008 instr = fe000ee3   a0 = 30   beq   $0, $0, 0xfffffffc (-4)
+   65  pc = 00000004 instr = 00150513   a0 = 30   addi  $10, $10, 0x00000001
+   66  pc = 00000008 instr = fe000ee3   a0 = 31   beq   $0, $0, 0xfffffffc (-4)
+   67  pc = 00000004 instr = 00150513   a0 = 31   addi  $10, $10, 0x00000001
+   68  pc = 00000008 instr = fe000ee3   a0 = 32   beq   $0, $0, 0xfffffffc (-4)
+   69  pc = 00000004 instr = 00150513   a0 = 32   addi  $10, $10, 0x00000001
+   70  pc = 00000008 instr = fe000ee3   a0 = 33   beq   $0, $0, 0xfffffffc (-4)
+   71  pc = 00000004 instr = 00150513   a0 = 33   addi  $10, $10, 0x00000001
+   72  pc = 00000008 instr = fe000ee3   a0 = 34   beq   $0, $0, 0xfffffffc (-4)
+   73  pc = 00000004 instr = 00150513   a0 = 34   addi  $10, $10, 0x00000001
+   74  pc = 00000008 instr = fe000ee3   a0 = 35   beq   $0, $0, 0xfffffffc (-4)
+   75  pc = 00000004 instr = 00150513   a0 = 35   addi  $10, $10, 0x00000001
+   76  pc = 00000008 instr = fe000ee3   a0 = 36   beq   $0, $0, 0xfffffffc (-4)
+   77  pc = 00000004 instr = 00150513   a0 = 36   addi  $10, $10, 0x00000001
+   78  pc = 00000008 instr = fe000ee3   a0 = 37   beq   $0, $0, 0xfffffffc (-4)
+   79  pc = 00000004 instr = 00150513   a0 = 37   addi  $10, $10, 0x00000001
+   80  pc = 00000008 instr = fe000ee3   a0 = 38   beq   $0, $0, 0xfffffffc (-4)
+   81  pc = 00000004 instr = 00150513   a0 = 38   addi  $10, $10, 0x00000001
+   82  pc = 00000008 instr = fe000ee3   a0 = 39   beq   $0, $0, 0xfffffffc (-4)
+   83  pc = 00000004 instr = 00150513   a0 = 39   addi  $10, $10, 0x00000001
+   84  pc = 00000008 instr = fe000ee3   a0 = 40   beq   $0, $0, 0xfffffffc (-4)
+   85  pc = 00000004 instr = 00150513   a0 = 40   addi  $10, $10, 0x00000001
+   86  pc = 00000008 instr = fe000ee3   a0 = 41   beq   $0, $0, 0xfffffffc (-4)
+   87  pc = 00000004 instr = 00150513   a0 = 41   addi  $10, $10, 0x00000001
+   88  pc = 00000008 instr = fe000ee3   a0 = 42   beq   $0, $0, 0xfffffffc (-4)
+   89  pc = 00000004 instr = 00150513   a0 = 42   addi  $10, $10, 0x00000001
+   90  pc = 00000008 instr = fe000ee3   a0 = 43   beq   $0, $0, 0xfffffffc (-4)
+   91  pc = 00000004 instr = 00150513   a0 = 43   addi  $10, $10, 0x00000001
+   92  pc = 00000008 instr = fe000ee3   a0 = 44   beq   $0, $0, 0xfffffffc (-4)
+   93  pc = 00000004 instr = 00150513   a0 = 44   addi  $10, $10, 0x00000001
+   94  pc = 00000008 instr = fe000ee3   a0 = 45   beq   $0, $0, 0xfffffffc (-4)
+   95  pc = 00000004 instr = 00150513   a0 = 45   addi  $10, $10, 0x00000001
+   96  pc = 00000008 instr = fe000ee3   a0 = 46   beq   $0, $0, 0xfffffffc (-4)
+   97  pc = 00000004 instr = 00150513   a0 = 46   addi  $10, $10, 0x00000001
+   98  pc = 00000008 instr = fe000ee3   a0 = 47   beq   $0, $0, 0xfffffffc (-4)
+   99  pc = 00000004 instr = 00150513   a0 = 47   addi  $10, $10, 0x00000001
+  100  pc = 00000008 instr = fe000ee3   a0 = 48   beq   $0, $0, 0xfffffffc (-4)
+  101  pc = 00000004 instr = 00150513   a0 = 48   addi  $10, $10, 0x00000001
+  102  pc = 00000008 instr = fe000ee3   a0 = 49   beq   $0, $0, 0xfffffffc (-4)
+  103  pc = 00000004 instr = 00150513   a0 = 49   addi  $10, $10, 0x00000001
+  104  pc = 00000008 instr = fe000ee3   a0 = 50   beq   $0, $0, 0xfffffffc (-4)
+  105  pc = 00000004 instr = 00150513   a0 = 50   addi  $10, $10, 0x00000001
+  106  pc = 00000008 instr = fe000ee3   a0 = 51   beq   $0, $0, 0xfffffffc (-4)
+  107  pc = 00000004 instr = 00150513   a0 = 51   addi  $10, $10, 0x00000001
+  108  pc = 00000008 instr = fe000ee3   a0 = 52   beq   $0, $0, 0xfffffffc (-4)
+  109  pc = 00000004 instr = 00150513   a0 = 52   addi  $10, $10, 0x00000001
+  110  pc = 00000008 instr = fe000ee3   a0 = 53   beq   $0, $0, 0xfffffffc (-4)
+  111  pc = 00000004 instr = 00150513   a0 = 53   addi  $10, $10, 0x00000001
+  112  pc = 00000008 instr = fe000ee3   a0 = 54   beq   $0, $0, 0xfffffffc (-4)
+  113  pc = 00000004 instr = 00150513   a0 = 54   addi  $10, $10, 0x00000001
+  114  pc = 00000008 instr = fe000ee3   a0 = 55   beq   $0, $0, 0xfffffffc (-4)
+  115  pc = 00000004 instr = 00150513   a0 = 55   addi  $10, $10, 0x00000001
+  116  pc = 00000008 instr = fe000ee3   a0 = 56   beq   $0, $0, 0xfffffffc (-4)
+  117  pc = 00000004 instr = 00150513   a0 = 56   addi  $10, $10, 0x00000001
+  118  pc = 00000008 instr = fe000ee3   a0 = 57   beq   $0, $0, 0xfffffffc (-4)
+  119  pc = 00000004 instr = 00150513   a0 = 57   addi  $10, $10, 0x00000001
+  120  pc = 00000008 instr = fe000ee3   a0 = 58   beq   $0, $0, 0xfffffffc (-4)
+Timeout
