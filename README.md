@@ -24,7 +24,7 @@
 
 
 ***
-# 2 курс Ongoing
+# 2 курс
 ### Веб-программирование
 + [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Web-programming/Lab1)
 + [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Web-programming/Lab2)
@@ -42,7 +42,57 @@
 ### Вычислительная математика
 + [Метод Гаусса](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Computational%20mathematics/Lab1)
 
+### Дизайн вещей будущего
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/2nd%20year/Design_of_things_of_the_future)
 
+
+
+
+
+***
+# 3 курс
+### Информационные системы и базы данных
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Information%20systems%20and%20databases/lab1)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Information%20systems%20and%20databases/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Information%20systems%20and%20databases/lab3)
++ [4 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Information%20systems%20and%20databases/lab4)
++ [Курсовая работа](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Information%20systems%20and%20databases/course%20work)
+
+### Системы ввода/вывода
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Input_Output/lab1)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Input_Output/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Input_Output/lab3)
++ [Зачётная работа](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Input_Output/io_zachet)
+
+### Низкоуровневое программирование
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Low%20level%20programming/Lab1)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Low%20level%20programming/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Low%20level%20programming/Lab3)
+
+### Тестирование программного обеспечения
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Software%20Testing/lab1)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Software%20Testing/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Software%20Testing/lab3)
+
+### Cистемы искусственного интеллекта
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/artificial%20intelligence%20systems/lab1)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/artificial%20intelligence%20systems/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/artificial%20intelligence%20systems/lab3)
++ [4 лабораторная](https://github.com/Denoske/ITMO-labs/blob/main/3nd%20year/artificial%20intelligence%20systems/Отчёт%20СИИ%204%20лабораторная.pdf)
++ [5 лабораторная](https://github.com/Denoske/ITMO-labs/blob/main/3nd%20year/artificial%20intelligence%20systems/Отчёт%20СИИ%205%20лабораторная.pdf)
+
+### Архитектура компьютера
++ [Моделирование RISC процессора](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Сomputer%20architecture)
+
+### Функциональная схемотехника
++ [1 лабораторная](https://github.com/Denoske/ITMO-labs/blob/main/3nd%20year/Functional%20circuitry/lab1/Голиков_Д_И_Лаб1.pdf)
++ [2 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Functional%20circuitry/lab2)
++ [3 лабораторная](https://github.com/Denoske/ITMO-labs/blob/main/3nd%20year/Functional%20circuitry/lab3/Схемотехника%20лаб3%20отчет.pdf)
++ [4 лабораторная](https://github.com/Denoske/ITMO-labs/tree/main/3nd%20year/Functional%20circuitry/lab4)
+
+
+***
+# 4 курс in future
 
 ![iam-hungry](https://media.tenor.com/Lqhx2RAD46sAAAAd/mr-bean-mr-bean-holiday.gif)
 
